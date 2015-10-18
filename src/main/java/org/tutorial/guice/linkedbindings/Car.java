@@ -1,6 +1,6 @@
 package org.tutorial.guice.linkedbindings;
 
-import com.google.inject.Inject;
+import javax.inject.Inject;
 
 public class Car {
 
