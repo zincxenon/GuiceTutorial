@@ -1,6 +1,8 @@
 package org.tutorial.guice.bindingannotations;
 
-import com.google.inject.Inject;
+import javax.inject.Inject;
+import javax.inject.Named;
+
 
 public class Car {
 
@@ -11,10 +13,12 @@ public class Car {
 
     @Inject
     public Car(
+            // Use self defined @CarTireAnnotation (type safe)
             @CarTireAnnotation ITire frontLeft,
             @CarTireAnnotation ITire frontRight,
-            @CarTireAnnotation ITire rearLeft,
-            @CarTireAnnotation ITire rearRight) {
+            // Use @Named (compiler can't check string, use with caution)
+            @Named("CarTireName") ITire rearLeft,
+            @Named("CarTireName") ITire rearRight) {
         super();
         this.frontLeft = frontLeft;
         this.frontRight = frontRight;
