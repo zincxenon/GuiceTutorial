@@ -1,4 +1,4 @@
-package org.tutorial.guice.linkedbindings;
+package org.tutorial.guice.bindingannotations;
 
 import static org.junit.Assert.*;
 
@@ -15,6 +15,7 @@ public class CarTest {
 		Car testCar = injector.getInstance(Car.class);
 		assertTrue("object created", testCar != null);
 		assertEquals("tire pressure", 2.4f, testCar.getFrontLeftTire().getPressure(), 0);
+		
 	}
 
 }
