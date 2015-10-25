@@ -1,4 +1,4 @@
-package org.tutorial.guice.providesmethods;
+package org.tutorial.guice.providerbindings;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
